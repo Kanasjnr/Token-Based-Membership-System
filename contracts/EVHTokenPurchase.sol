@@ -45,29 +45,26 @@ contract TokenPurchase {
     require(msg.sender != address(0), "Zero not allowed");
     require(_amount > 0, "Cannot swap zero amount");
 
-    
-    uint256 standardAmount = _amount * 10**18;
 
     uint256 userBal = usdtToken.balanceOf(_from);
-    require(userBal >= standardAmount, "Your balance is not enough");
+    require(userBal >= _amount, "Your balance is not enough");
 
     uint256 allowance = usdtToken.allowance(_from, address(this));
     require(allowance >= _amount, "Token allowance too low");
 
-    bool deducted = usdtToken.transferFrom(_from, address(this), standardAmount);
+    bool deducted = usdtToken.transferFrom(_from, address(this), _amount);
     require(deducted, "Execution failed");
 
-    contractBalances[Currency.USDT] += standardAmount;
+    contractBalances[Currency.USDT] += _amount;
 
-    uint256 convertedValue_ = EVH_Usdt_Rate(standardAmount, Currency.USDT);
+    uint256 convertedValue_ = EVH_Usdt_Rate(_amount, Currency.USDT);
     bool swapped = eventHubToken.transfer(_from, convertedValue_);
 
     if (swapped) {
         contractBalances[Currency.EVH] += convertedValue_;
-        emit SwapSuccessful(_from, address(this), standardAmount);
+        emit SwapSuccessful(_from, address(this), _amount);
     }
 }
-
 
 
       function withdraw(Currency _currencyName, uint256 _amount) external onlyOwner  {

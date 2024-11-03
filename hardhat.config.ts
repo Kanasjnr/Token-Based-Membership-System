@@ -10,7 +10,7 @@ const config: HardhatUserConfig = {
   networks: {
     base_sepolia: {
       url: `https://base-sepolia.g.alchemy.com/v2/${ALCHEMY_API_KEY}`,
-      accounts: [vars.get("MY_KEY")],
+      accounts: [vars.get("PRIVATE_KEY")],
     },
   },
   etherscan: {

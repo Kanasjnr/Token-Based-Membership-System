@@ -33,6 +33,8 @@ contract EventHub {
     event EventCreated(string indexed title, uint256 date);
     event EventJoined(address indexed user, uint256 eventIndex);
     event TokensPurchased(address indexed buyer, uint256 amount);
+    event EventCancelled(uint256 eventIndex);
+
     constructor(IERC20 _eventHubToken, IEventProposal _eventProposal, IEVHTokenPurchase _eVHTokenPurchase) {
         owner = msg.sender;
         eventHubToken = _eventHubToken;
@@ -42,7 +44,7 @@ contract EventHub {
 
     modifier onlyOwner() {
         require(msg.sender != address(0), "Zero not allowed");
-        require(msg.sender == owner, "Only owner can access");
+        require(msg.sender == owner, "Only owner can do this");
         _;
     }
 
@@ -105,7 +107,7 @@ contract EventHub {
 
     function voteOnEventProposal(uint8 _index) external {
         require(msg.sender != address(0), "Invalid address");
-        require( _index > eventProposal.getAllProposals().length, "Such proposal does not exist");
+        require( _index < eventProposal.getAllProposals().length, "Such proposal does not exist");
         require(eventHubToken.balanceOf(msg.sender) > 0, "You must hold tokent to vote");
         if(eventHubToken.balanceOf(msg.sender) >  HIGH_VOTING_POWER) {
             eventProposal.voteOnProposal(_index, true, msg.sender);
@@ -132,6 +134,8 @@ contract EventHub {
         require(msg.sender != address(0));
         require(_index < allEvents.length, "Out of bound");
         allEvents[_index].isActive = false;
+
+        emit EventCancelled(_index);
     }
 
     function getAnEvent(uint8 _index) external  view  returns(Event memory) {

@@ -39,7 +39,7 @@ contract EventProposal {
     function voteOnProposal(uint8 _index, bool _votingPower, address _by) external {
         require(msg.sender != address(0), "Zero not allowed");
         require(_index < proposals.length, "index is out-of-bound");
-        require(!hasVoted[msg.sender][_index], "You've voted already");
+        require(!hasVoted[_by][_index], "You've voted already");
 
         Proposal storage currentProposal = proposals[_index];
 
