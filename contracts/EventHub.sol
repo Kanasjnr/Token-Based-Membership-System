@@ -28,6 +28,8 @@ contract EventHub {
         bool isActive;   
     }
 
+    
+
     Event[] public allEvents;
 
     event EventCreated(string indexed title, uint256 date);

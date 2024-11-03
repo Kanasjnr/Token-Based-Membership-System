@@ -5,6 +5,7 @@ library PropsLibrary {
     enum PropsStatus {None, Created, pending, Accepted}
 
 
+
      struct Proposal {
         string name;
         string description;

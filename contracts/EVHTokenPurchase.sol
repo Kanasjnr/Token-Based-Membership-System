@@ -10,6 +10,7 @@ contract TokenPurchase {
     IERC20 public usdtToken;
 
     address owner;
+    
     bool internal locked;
     uint256 internal constant ONE_USDT_TO_EVH = 1600;
 

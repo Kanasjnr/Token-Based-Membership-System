@@ -7,6 +7,7 @@ enum Currency {
     USDT
 }
 
+
 interface IEVHTokenPurchase {
     function swapUsdtToEVH(address _from, uint256 _amount) external;
 

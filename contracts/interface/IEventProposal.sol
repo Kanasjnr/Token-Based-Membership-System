@@ -4,6 +4,7 @@ import {PropsLibrary} from "./../library/PropsLibrary.sol";
 
 
 
+
 interface IEventProposal {
 
         function createProposal(string memory _name, string memory _desc, uint16 _quorum) external ;

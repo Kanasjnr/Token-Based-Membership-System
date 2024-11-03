@@ -22,6 +22,9 @@ contract EventProposal {
     event ProposalApproved(string indexed name, uint count);
     event ProposalActive(string indexed name, uint count);
 
+    constructor() {}
+    
+
     function createProposal(string memory _name, string memory _desc, uint16 _quorum) external  {
         require(msg.sender != address(0), "Zero address not allowed" );
         Proposal memory newProposal;
