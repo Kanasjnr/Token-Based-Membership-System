@@ -18,3 +18,10 @@
     transform: translateX(-50%);
   }
 }
+
+.swapbg {
+  background-color: #3A06AA;
+}
+.swaptextclr {
+  color: #3A06AA;
+}
