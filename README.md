@@ -53,15 +53,8 @@ EventHub is a revolutionary Web3 platform that allows users to create, join, and
    yarn install
    ```
 
-3. Set up environment variables:
-   Create a `.env.local` file in the root directory and add the following:
 
-   ```
-   NEXT_PUBLIC_CONTRACT_ADDRESS=your_contract_address_here
-   NEXT_PUBLIC_INFURA_ID=your_infura_id_here
-   ```
-
-4. Run the development server:
+3. Run the development server:
 
    ```
    npm run dev
@@ -92,7 +85,7 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 
 ## Contact
 
-For any questions or support, please contact us at support@eventhub.io or join our community Discord server.
+For any questions or support, please contact us at nasihudeen04@gmail.com or soliumuhammed953@gmail.com .
 
 ---
 
