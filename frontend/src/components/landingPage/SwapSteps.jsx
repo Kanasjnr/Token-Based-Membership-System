@@ -4,7 +4,9 @@ import React from 'react'
 const SwapSteps = () => {
   return (
     <div class=" text-white py-16 px-6 sm:px-12 lg:px-24">
-    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 lg:mb-16">How It Works</h2>
+
+    <h2 class="text-3xl sm:text-4xl font-bold text-center mb-8 lg:mb-16">How It Works </h2>
+
     <div class="flex flex-col wrap md:flex-row items-center md:justify-between space-y-8 md:space-y-0 md:space-x-8">
         <div class=" space-y-2 lg:space-y-8  md:w-1/2">
             <div class="flex items-center justify-start space-x-4">
