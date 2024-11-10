@@ -2,6 +2,7 @@ import React from 'react'
 import Navbar from './components/Navbar'
 import Hero from './components/Hero'
 import Features from './components/Feautres'
+import SwapSteps from './components/SwapSteps'
 
 
 function App() {
@@ -11,6 +12,7 @@ function App() {
       <Navbar  />
       <Hero />
       <Features />
+      <SwapSteps/>
     </div>
   )
 }
