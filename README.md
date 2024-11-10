@@ -13,10 +13,9 @@ EventHub is a revolutionary Web3 platform that allows users to create, join, and
 ## Technologies Used
 
 - React.js
-- Next.js
 - Tailwind CSS
-- Ethereum Smart Contracts (Solidity)
-- Web3.js
+- Solidity
+
 
 ## Deployed Contract
 
