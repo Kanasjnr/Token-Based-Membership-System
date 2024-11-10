@@ -63,8 +63,10 @@ EventHub is a revolutionary Web3 platform that allows users to create, join, and
 4. Participate in decentralized decision-making for event management.
 
 ## Deployed Contract
-    Network: Base Sepolia Testnet
-    Contract Address: `0x25c6Ff486965155CD852e0444dCaE3e3a0A1F074` ([View on baseScan](https://sepolia.basescan.org/address/0x25c6Ff486965155CD852e0444dCaE3e3a0A1F074))
+
+    - Network: Base Sepolia Testnet
+- Contract Address: `0x25c6Ff486965155CD852e0444dCaE3e3a0A1F074` ([View on BaseScan](https://sepolia.basescan.org/address/0x25c6Ff486965155CD852e0444dCaE3e3a0A1F074))
+
 
 
 ## Contributing
