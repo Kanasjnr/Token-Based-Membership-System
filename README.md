@@ -13,9 +13,16 @@ EventHub is a revolutionary Web3 platform that allows users to create, join, and
 ## Technologies Used
 
 - React.js
+- Next.js
 - Tailwind CSS
 - Ethereum Smart Contracts (Solidity)
 - Web3.js
+
+## Deployed Contract
+
+    - Network: Base Sepolia Testnet
+
+- Contract Address: `0x25c6Ff486965155CD852e0444dCaE3e3a0A1F074` ([View on BaseScan](https://sepolia.basescan.org/address/0x25c6Ff486965155CD852e0444dCaE3e3a0A1F074))
 
 ## Getting Started
 
@@ -28,27 +35,40 @@ EventHub is a revolutionary Web3 platform that allows users to create, join, and
 ### Installation
 
 1. Clone the repository:
+
    ```
    git clone https://github.com/yourusername/eventhub.git
    cd eventhub
    ```
 
 2. Install dependencies:
+
    ```
    npm install
    ```
+
    or
+
    ```
    yarn install
    ```
 
-  ```
+3. Set up environment variables:
+   Create a `.env.local` file in the root directory and add the following:
 
-3. Run the development server:
+   ```
+   NEXT_PUBLIC_CONTRACT_ADDRESS=your_contract_address_here
+   NEXT_PUBLIC_INFURA_ID=your_infura_id_here
+   ```
+
+4. Run the development server:
+
    ```
    npm run dev
    ```
+
    or
+
    ```
    yarn dev
    ```
@@ -61,13 +81,6 @@ EventHub is a revolutionary Web3 platform that allows users to create, join, and
 2. Browse available events or create a new event.
 3. Use EVH tokens to join events or vote on proposals.
 4. Participate in decentralized decision-making for event management.
-
-## Deployed Contract
-
-    - Network: Base Sepolia Testnet
-- Contract Address: `0x25c6Ff486965155CD852e0444dCaE3e3a0A1F074` ([View on BaseScan](https://sepolia.basescan.org/address/0x25c6Ff486965155CD852e0444dCaE3e3a0A1F074))
-
-
 
 ## Contributing
 
