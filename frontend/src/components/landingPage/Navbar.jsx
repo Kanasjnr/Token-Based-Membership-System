@@ -5,18 +5,21 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
+
     <nav className="relative z-10 w-full overflow-hidden">
       <div className="absolute inset-0 overflow-hidden">
         <div className="absolute inset-0 bg-[url('/hero-bg.png')] bg-repeat-x h-[200px] w-full animate-wave"></div>
         <div className="absolute inset-0 bg-[url('/hero-bg.png')] bg-repeat-x h-[200px] w-full animate-wave" style={{ animationDelay: '-3s', opacity: '0.9' }}></div>
         <div className="absolute inset-0 bg-[url('/hero-bg.png')] bg-repeat-x h-[200px] w-full animate-wave" style={{ animationDelay: '-4s', opacity: '0.7' }}></div>
       </div>
+
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="flex items-center justify-between h-24 sm:h-32">
           <div className="flex-shrink-0">
             <img 
               src="/eventhub.png" 
               alt="EventHub Logo" 
+
               className="h-10 sm:h-12 w-auto animate-fade-in"
             />
           </div>
@@ -28,11 +31,14 @@ export default function Navbar() {
               How It Works
             </a>
             <a href="#" className="text-white font-bold text-lg hover:text-opacity-80 transition-colors animate-fade-in-up" style={{ animationDelay: '300ms' }}>
+
               Join
             </a>
           </div>
           <div className="hidden md:block">
+
             <button className="bg-[#8859EC] w-36 h-10 text-white rounded-md text-base font-bold hover:bg-opacity-90 transition-colors animate-fade-in-up" style={{ animationDelay: '400ms' }}>
+
               Connect Wallet
             </button>
           </div>
@@ -62,6 +68,7 @@ export default function Navbar() {
           </div>
         </div>
       )}
+
       <style jsx>{`
         @keyframes wave {
           0% { transform: translateX(0) translateZ(0) scaleY(1); }
@@ -88,6 +95,7 @@ export default function Navbar() {
           animation-fill-mode: both;
         }
       `}</style>
+
     </nav>
   )
 }
